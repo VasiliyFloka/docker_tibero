@@ -7,13 +7,13 @@ Scripts to create docker image with [Tibero](http://tmaxsoft.com/products/tibero
 if not, install docker following the [instructions](https://docs.docker.com/engine/installation)
 ### 2. Register on the [TmaxSoft TechNet site](https://technet.tmaxsoft.com/en/front/main/main.do)
 ### 3. Download [Tibero for Linux (x86) 64-bit](https://technet.tmaxsoft.com/en/front/download/viewDownload.do?cmProductCode=0301&version_seq=PVER-20170217-000001&doc_type_cd=DN) and rename file to Tibero.tar.gz
-4. Request Demo License on the [TmaxSoft TechNet site](https://technet.tmaxsoft.com/en/front/main/main.do)
-5. Download [Java JDK jdk-...-linux-x64.rpm](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and rename file to jdk.rpm
-6. Put Tibero.tar.gz, license.xml, jdk.rpm and this script files together in one directory and set this directory to the current one:
+### 4. Request Demo License on the [TmaxSoft TechNet site](https://technet.tmaxsoft.com/en/front/main/main.do)
+### 5. Download [Java JDK jdk-...-linux-x64.rpm](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and rename file to jdk.rpm
+### 6. Put Tibero.tar.gz, license.xml, jdk.rpm and this script files together in one directory and set this directory to the current one:
     $ cd docker_tibero
     [docker@localhost docker_tibero]$ ls
     bash_profile.add  create_database.sql  Dockerfile  jdk.rpm  LICENSE  license.xml  README.md  tibero.sh  Tibero.tar.gz
-7. Run tibero.sh:
+### 7. Run tibero.sh:
     $ ./tibero.sh
     Sending build context to Docker daemon  623.7MB
     Step 1/13 : FROM centos
@@ -77,7 +77,7 @@ if not, install docker following the [instructions](https://docs.docker.com/engi
     Removing intermediate container ff69ff9c318e
     Successfully built be915bd1a4af
     Successfully tagged tibero6:latest
-8. After starting the container, you have to set MEMORY_TARGET in Megabytes:
+### 8. After starting the container, you have to set MEMORY_TARGET in Megabytes:
     [docker@localhost docker_tibero]$ docker run --name t6 -p 8888:8629 --hostname node1 -ti tibero6 su - tibero
     ***** Welcome! *****
     Using TB_SID "tibero"
@@ -341,7 +341,7 @@ if not, install docker following the [instructions](https://docs.docker.com/engi
     Creating agent table...
     Done.
     For details, check /home/tibero/tibero6/instance/tibero/log/system_init.log.
-9. After database creation enter 2, to start tbsql
+### 9. After database creation enter 2, to start tbsql
     1. tbboot
     2. tbsql
     Enter number of action(1..2):2
