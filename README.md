@@ -341,7 +341,7 @@ if not, install docker following the [instructions](https://docs.docker.com/engi
     Creating agent table...
     Done.
     For details, check /home/tibero/tibero6/instance/tibero/log/system_init.log.
-### 9. After database creation enter 2, to start tbsql
+### 9. After creating the database, enter 2 to run tbsql
     1. tbboot
     2. tbsql
     Enter number of action(1..2):2
